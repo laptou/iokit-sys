@@ -1,0 +1,15 @@
+[package]
+name = "iokit-sys"
+version = "0.4.0"
+edition = "2021"
+
+[dependencies]
+bindgen = { version = "0.68.1", features = ["prettyplease"] }
+block = "0.1.6"
+core-foundation-sys = "0.8.4"
+libc = "0.2.148"
+mach = "0.3.2"
+objc = "0.2.7"
+
+[build-dependencies]
+bindgen = "0.68.1"
