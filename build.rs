@@ -46,7 +46,7 @@ fn main() {
             "-x",
             "objective-c",
             "-fblocks",
-            "-fmodules",
+            // "-fmodules",
             "-isysroot",
             framework_path,
         ])
