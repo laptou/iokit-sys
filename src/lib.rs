@@ -4,6 +4,7 @@
 #![allow(non_upper_case_globals)]
 #![allow(unexpected_cfgs)]
 #![allow(unused)]
+#![allow(unsafe_op_in_unsafe_fn)]
 
 // use libc::*;
 use core_foundation_sys::array::*;
@@ -27,9 +28,10 @@ use core_foundation_sys::url::*;
 use core_foundation_sys::uuid::*;
 use libc::{natural_t, uuid_t};
 use mach::{clock_types::*, kern_return::kern_return_t, mach_types::*, message::*, vm_types::*};
+use objc::runtime::Object as NSObject;
 
 type CFMutableSetRef = *mut __CFSet;
 type CFMutableArrayRef = *mut __CFArray;
 
 include!(concat!(env!("OUT_DIR"), "/iokit.rs"));
-include!(concat!(env!("OUT_DIR"), "/iokit-extra.rs"));
+// include!(concat!(env!("OUT_DIR"), "/iokit-extra.rs"));

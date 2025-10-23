@@ -44,6 +44,7 @@
             rustToolchain
             openssl
             rust-analyzer
+            cargo-outdated
           ];
 
           env = {
